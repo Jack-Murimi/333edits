@@ -1,6 +1,5 @@
 "use client";
 
-import { Navbar } from "@/components/navbar";
 import { useStateContext } from "@/context/state-context";
 
 export default function Home() {

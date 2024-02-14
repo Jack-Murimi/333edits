@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Service", href: "/service" },
+  { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Contact", href: "/contacts" },
   { name: "About", href: "/about" },
@@ -30,7 +30,7 @@ export function Navbar() {
       </Link>
       <section className="hidden md:flex-1 md:flex justify-center space-x-3">
         {navLinks.map((link) => {
-          const isActive = pathName.startsWith(link.href);
+          const isActive = pathName.endsWith(link.href);
           return (
             <Link
               className={
